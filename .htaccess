@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# [L] は評価終了
+# [NE] はURLエンコードしない。指定しないと %22query+str%22 が %2522query+str%2522 になる
+
+#- ▼ 全てのリクエストをindex.cgiに送る
+# mod_rewriteの適用を終了する条件
+RewriteRule  ^index\.cgi  -  [L]
+
+# それ以外の場合はURIを index.cgi に修正
+RewriteCond  %{REQUEST_URI}  ^/(timecalc/)?
+RewriteRule  .*  /%1index.cgi  [L,NE]
+#- ▲ 全てのリクエストをindex.cgiに送る
