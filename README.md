@@ -18,5 +18,5 @@ Webベースの時間計算ツールです。
 
 Copyright &copy; 2015 Yuki Naito
  ([@meso_cacase](http://twitter.com/meso_cacase))  
-This software is distributed under modified BSD license
+This software is distributed under [modified BSD license]
  (http://www.opensource.org/licenses/bsd-license.php)

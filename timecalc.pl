@@ -154,6 +154,9 @@ $html =~ s{^(ERROR.*)$}{<p><font color=red>$1</font></p>}s ;
 
 <ul>
 	<li>(1:23:45.67+22:22+12.34)/3 のような計算が簡単にできます。
+	<li>URLに数式を入れて計算することもできます：<br>
+		<a href='http://altair.dbcls.jp/timecalc/(1:23:45.67+22:22+12.34)/3'>
+		http://altair.dbcls.jp/timecalc/(1:23:45.67+22:22+12.34)/3</a>
 	<li>使える記号：+, -, *, /, (, )
 </ul>
 </div>" ;
