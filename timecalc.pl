@@ -149,8 +149,8 @@ $html =~ s{^(ERROR.*)$}{<p><font color=red>$1</font></p>}s ;
 #- ▲ エラーページ：引数が ERROR で始まる場合
 
 #- ▼ トップページ：引数がない場合
-(not $html) and $html =
-"<div id='usage'>
+(not $html) and $html = << '--EOS--' ;
+<div id='usage'>
 <p>つかいかた：</p>
 
 <ul>
@@ -160,7 +160,8 @@ $html =~ s{^(ERROR.*)$}{<p><font color=red>$1</font></p>}s ;
 		http://altair.dbcls.jp/timecalc/(1:23:45.67+22:22+12.34)/3</a>
 	<li>使える記号：+, -, *, /, (, )
 </ul>
-</div>" ;
+</div>
+--EOS--
 #- ▲ トップページ：引数がない場合
 
 #- ▼ HTML出力
@@ -169,7 +170,9 @@ $query_string = escape_char($query_string) ;  # XSS対策
 print "Content-type: text/html; charset=utf-8\n\n",
 
 #-- ▽ +++++++++++++++++ HTML +++++++++++++++++++
-"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+
+<< "--EOS--" ;
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
 <html lang=ja>
 
 <head>
@@ -204,9 +207,17 @@ print "Content-type: text/html; charset=utf-8\n\n",
 
 $html
 
+<hr><!-- ________________________________________ -->
+
+<p><font color=gray>
+<a target='_blank' href='https://github.com/meso-cacase/timecalc'>timecalc</a> by
+<a target='_blank' href='http://twitter.com/meso_cacase'>\@meso_cacase</a>
+</font></p>
+
 </body>
 </html>
-" ;
+--EOS--
+
 #-- △ +++++++++++++++++ HTML +++++++++++++++++++
 #- ▲ HTML出力
 
