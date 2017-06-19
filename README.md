@@ -9,8 +9,7 @@ Webベースの時間計算ツールです。
 サンプル画像
 -----
 
-![スクリーンショット]
-(http://g86.dbcls.jp/~meso/meme/wp-content/uploads/2015/01/timecalc.png
+![スクリーンショット](http://data.dbcls.jp/~meso/img/timecalc.png
 "時間計算機スクリーンショット")
 
 ライセンス
@@ -18,5 +17,5 @@ Webベースの時間計算ツールです。
 
 Copyright &copy; 2015-2017 Yuki Naito
  ([@meso_cacase](http://twitter.com/meso_cacase))  
-This software is distributed under [modified BSD license]
- (http://www.opensource.org/licenses/bsd-license.php)
+This software is distributed under
+[modified BSD license](http://www.opensource.org/licenses/bsd-license.php).
